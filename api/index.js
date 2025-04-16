@@ -1,11 +1,5 @@
-// index.js
-const http = require('http');
+// api/index.js
 
-const server = http.createServer((req, res) => {
-  res.end('Hello from backend!');
-});
-
-server.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');
-});
-
+export default function handler(req, res) {
+  res.status(200).json({ message: "Hello from backend!" });
+}
